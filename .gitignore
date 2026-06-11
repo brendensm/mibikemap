@@ -1,0 +1,28 @@
+# macOS / editor cruft
+.DS_Store
+**/.DS_Store
+
+# R session, history, workspace, RStudio per-user state
+.Rhistory
+.RData
+.Rdata
+.Ruserdata
+.Rproj.user/
+
+# Local, machine-specific Claude Code config (permissions etc.)
+.claude/settings.local.json
+
+# Generated dataset from the reference osm_classify.R (large, rebuildable)
+data/
+
+# Downloaded source-data caches. script.R / osm_classify.R re-fetch these on
+# build, and the published map is the prebuilt output/index.html, so they don't
+# need to live in the repo. Kept on purpose: data-raw/mi_outline.geojson (the
+# logo build reads it and it is NOT auto-downloaded) and the audit inputs
+# (wiki_railtrails.html, overpass_*.txt).
+data-raw/*.osm
+data-raw/*.kml
+data-raw/dnr_*.geojson
+data-raw/midland_*.geojson
+audit_*
+ref/*

@@ -1,0 +1,16 @@
+[out:xml][timeout:600];
+area["ISO3166-2"="US-MI"]->.mi;
+(
+  way(area.mi)[highway=cycleway];
+  way(area.mi)[highway=path][bicycle~"yes|designated|permissive"];
+  way(area.mi)[highway=footway][bicycle~"yes|designated"];
+  way(area.mi)[highway=bridleway][bicycle~"yes|designated"];
+  way(area.mi)[highway~"^(primary|secondary|tertiary|residential|unclassified|trunk|primary_link|secondary_link|tertiary_link)$"][cycleway~"lane|track|shared_lane|buffered_lane"];
+  way(area.mi)[highway~"^(primary|secondary|tertiary|residential|unclassified|trunk)$"]["cycleway:both"~"lane|track"];
+  way(area.mi)[highway~"^(primary|secondary|tertiary|residential|unclassified|trunk)$"]["cycleway:left"~"lane|track"];
+  way(area.mi)[highway~"^(primary|secondary|tertiary|residential|unclassified|trunk)$"]["cycleway:right"~"lane|track"];
+);
+out body;
+>;
+out skel qt;
+

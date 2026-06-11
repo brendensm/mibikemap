@@ -1,0 +1,9 @@
+[out:xml][timeout:180];
+area["ISO3166-2"="US-MI"]->.mi;
+(
+  way(area.mi)[highway~"cycleway|path|footway"][railway~"abandoned|disused|razed|dismantled|former"];
+  way(area.mi)[highway~"cycleway|path|footway"][name~"rail.?trail",i];
+);
+out body;
+>;
+out skel qt;
