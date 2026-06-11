@@ -2,7 +2,7 @@
 
 A single, open map of bike trails in Michigan gathered from official and community sources and sorted into one convenient map.
 
-## Help grow the map 🚲
+## Help grow the map
 
 This is an open, community resource — and it's far from complete. If you know a
 trail that's missing, maintain a local trail map, or spot something
